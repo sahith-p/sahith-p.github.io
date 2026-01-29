@@ -6730,7 +6730,16 @@
     aria-hidden="true">
   </div>
 
-
+  <script>
+    // Override any Framer title changes
+    document.title = "Sahith Panchumarthy | Portfolio";
+    // Also watch for any future changes
+    new MutationObserver(() => {
+      if (document.title !== "Sahith Panchumarthy | Portfolio") {
+        document.title = "Sahith Panchumarthy | Portfolio";
+      }
+    }).observe(document.querySelector('title'), { childList: true });
+  </script>
 
 </body>
 
